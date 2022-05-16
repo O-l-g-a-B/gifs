@@ -1,4 +1,6 @@
-function searchMe() {
+button.onclick = function (evt) {
+    evt.preventDefault();
+
     let request = document.getElementById('request').value;
     fetch('https://api.giphy.com/v1/gifs/search?api_key=CZydw9PcANkq5vN3W3LF0Ee2PEfEi6hg&&limit=5&&q=' + request)
         .then(response => response.json())
